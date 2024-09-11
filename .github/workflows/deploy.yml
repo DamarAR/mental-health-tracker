@@ -2,39 +2,39 @@ name: Push to PWS
 
 on:
   push:
-    branches: [ master ]
+    branches: [main]
     paths-ignore:
-        - '**.md'
+      - "**.md"
   pull_request:
-    branches: [ master ]
+    branches: [main]
     paths-ignore:
-        - '**.md'
+      - "**.md"
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-    - name: Set up Git
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: Set up Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-    - name: Check PWS remote, pull, merge, and push
-      env:
-        PWS_URL: ${{ secrets.PWS_URL }}
-      run: |
+      - name: Check PWS remote, pull, merge, and push
+        env:
+          PWS_URL: ${{ secrets.PWS_URL }}
+        run: |
           # Check if master branch exists locally
           if ! git show-ref --verify --quiet refs/heads/master; then
             echo "Creating master branch"
             git branch master
           fi
-          
+
           # Switch to master branch
           git checkout master
 

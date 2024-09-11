@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "damar-aryaputra-mentalhealthtracker.pbp.cs.ui.ac.id"]
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://http://damar-aryaputra-mentalhealthtracker.pbp.cs.ui.ac.id/", "https://http://damar-aryaputra-mentalhealthtracker.pbp.cs.ui.ac.id/"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://https://damar.aryaputra: e-7BzKrxBpOh5Gn1IULwOTge2WnKVVlg@pbp.cs.ui.ac.id/damar.aryaputra/mentalhealthtracker", "https://https://damar.aryaputra:e-7BzKrxBpOh5Gn1IULwOTge2WnKVVlg@pbp.cs.ui.ac.id/damar.aryaputra/mentalhealthtracker"]
 
 
 
