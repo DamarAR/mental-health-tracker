@@ -10,7 +10,7 @@ def show_main(request):
     context = {
         'npm' : '2306256280',
         'name': 'Damar Aryaputra Rahman',
-        'class': 'PBP KKI',
+        'class': 'PBP-KKI',
         'mood_entries' : mood_entries
     }
 
