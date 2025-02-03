@@ -41,7 +41,7 @@ def create_mood_flutter(request):
 @login_required(login_url='/login')
 def show_main(request):
     context = {
-        'npm' : '2306172325',
+        'npm' : '2306256280',
         'name': request.user.username,
         'class': 'KKI',
         'last_login' : request.COOKIES.get('last_login')
